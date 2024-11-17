@@ -6,14 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> color flicker</h1>
-    <button id="Btn-id">Click</button>
+    <h1 id="heading">IDEA FLICKER APP</h1>
+    <button id="btn">Click</button>
     <script>
-        document.body.addEventListener('click', function() {  
-    document.body.style.backgroundColor = 'white';  
-        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-        document.body.style.backgroundColor = randomColor;
-    }, 100); 
+        const button=document.getElementById("btn");
+        const colors=['yellow','red','green','blue','grey'];
+        function changeColor(){
+            const random=Math.floor(Math.random()*colors.length);
+            document.body.style.backgroundColor=colors[random];
+            heading.style.color=colors[5-random];
+        }
+        button.addEventListener("click",changeColor);
     </script>
 </body>
 </html>
