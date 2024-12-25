@@ -36,6 +36,9 @@
 
             // Display result
             document.getElementById("result").innerText = "The person is "+age+" year old.";
+            if (age < 0) {
+                document.getElementById("result").innerText = "Please enter a valid date."
+            }
         }
     </script>
 </body>
